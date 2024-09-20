@@ -1,6 +1,6 @@
 import { createContext, useContext, useReducer } from "react";
 
-const ScoreContext = createContext(0);
+const ScoreContext = createContext(null);
 const ScoreDispatchContext = createContext(null);
 
 export function ScoreProvider({ children }) {
@@ -16,12 +16,12 @@ export function ScoreProvider({ children }) {
 }
 
 export function useScore() {
-  console.log("ScoreContext", useContext(ScoreContext));
+  // console.log("ScoreContext", useContext(ScoreContext));
   return useContext(ScoreContext);
 }
 
 export function useScoreDispatch() {
-  console.log("ScoreDispatchContext", useContext(ScoreDispatchContext));
+  // console.log("ScoreDispatchContext", useContext(ScoreDispatchContext));
   return useContext(ScoreDispatchContext);
 }
 
